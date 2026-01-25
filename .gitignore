@@ -1,0 +1,46 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Interview and unrelated content
+面试*.md
+一周面试复习计划.md
+个人简历_五年.md
+张磊_前端开发_5年.md
+learning-notes/
+clash.md
+
+# Specific non-Three.js HTML files in root
+baby_countdown copy.html
+baby_countdown.html
+baby_miracle_countdown.html
+cyber_baby_protocol.html
+heartbeat_countdown.html
+
+# Specific non-Three.js assets in root
+baby_scan.png
+baby_ultrasound_bg.png
+cute_mom_left.png
+cute_pregnant_mom.png
+floral_corners.png
