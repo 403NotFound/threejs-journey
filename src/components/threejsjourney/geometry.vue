@@ -13,6 +13,7 @@ import { ref, onMounted, onUnmounted } from 'vue'
 import * as THREE from 'three'
 import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls'
 import GUI from 'lil-gui'
+import { gsap } from 'gsap'
 
 const canvasContainer = ref(null)
 let scene, camera, renderer, controls, gui, clock
@@ -45,7 +46,28 @@ const generateGalaxy = () => {
   // 5. 创建物体并加入场景
   const mesh = new THREE.Mesh(geometry, material)
 
+  const parameters = {
+    spin() {
+      gsap.to(mesh.rotation, {
+        y: mesh.rotation.y + Math.PI,
+        duration: 1,
+        ease: 'power2.out'
+      })
+    }
+  }
+
   scene.add(mesh)
+
+  // GUI
+  gui = new GUI()
+  gui.add(material, 'wireframe')
+  gui.add(mesh.position, 'x').min(-10).max(10).step(0.01)
+  gui.add(mesh.position, 'y').min(-10).max(10).step(0.01)
+  gui.add(mesh.position, 'z').min(-10).max(10).step(0.01)
+
+  gui.addColor(material, 'color')
+
+  gui.add(parameters, 'spin')
 }
 
 const initThree = () => {
