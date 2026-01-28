@@ -53,10 +53,10 @@ const generateGalaxy = () => {
     // --- 核心数学：星系分布逻辑 ---
     // 基础半径
     const radius = Math.random() * parameters.radius
-    
+
     // 算出该粒子属于第几个分支 (0, 1, 2...)
     const branchAngle = (i % parameters.branches) / parameters.branches * Math.PI * 2
-    
+
     // 旋转偏移：离中心越远，旋转角度越大
     const spinAngle = radius * parameters.spin
 
@@ -129,10 +129,10 @@ const initThree = () => {
   const animate = () => {
     rafId = requestAnimationFrame(animate)
     const elapsedTime = clock.getElapsedTime()
-    
+
     // 让星系缓缓转动
     galaxyPoints.rotation.y = elapsedTime * 0.1
-    
+
     controls.update()
     renderer.render(scene, camera)
   }
@@ -157,9 +157,36 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
-.galaxy-container { width: 100vw; height: 100vh; position: relative; overflow: hidden; }
-.header { position: absolute; top: 20px; left: 20px; color: white; z-index: 10; pointer-events: none; }
-h2 { margin: 0; font-size: 1.5rem; color: #ff6030; }
-p { margin: 5px 0 0; font-size: 0.9rem; opacity: 0.6; }
-.canvas-wrapper { width: 100%; height: 100%; }
+.galaxy-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: white;
+  z-index: 10;
+  pointer-events: none;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #ff6030;
+}
+
+p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  opacity: 0.6;
+}
+
+.canvas-wrapper {
+  width: 100%;
+  height: 100%;
+}
 </style>

@@ -11,6 +11,8 @@ import Day07_Practice from './components/daily/Day07_Practice3_2.vue'
 import Day08 from './components/daily/Day08.vue'
 import Day09_Practice from './components/daily/Day09_Practice.vue'
 import Day10 from './components/daily/Day10_Galaxy_Generator.vue'
+import Day11 from './components/daily/Day11_HauntedHouse.vue'
+import Day12 from './components/threejsjourney/geometry.vue'
 </script>
 
 <template>
@@ -25,7 +27,9 @@ import Day10 from './components/daily/Day10_Galaxy_Generator.vue'
   <!-- <Day07_Practice /> -->
   <!-- <Day08 /> -->
   <!-- <Day09_Practice /> -->
-  <Day10 />
+  <!-- <Day10 /> -->
+  <!-- <Day11 /> -->
+  <Day12 />
 </template>
 
 <style>
