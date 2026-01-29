@@ -13,6 +13,7 @@ import Day09_Practice from './components/daily/Day09_Practice.vue'
 import Day10 from './components/daily/Day10_Galaxy_Generator.vue'
 import Day11 from './components/daily/Day11_HauntedHouse.vue'
 import Day12 from './components/threejsjourney/geometry.vue'
+import Day13 from './components/threejsjourney/textrues.vue'
 </script>
 
 <template>
@@ -29,7 +30,8 @@ import Day12 from './components/threejsjourney/geometry.vue'
   <!-- <Day09_Practice /> -->
   <!-- <Day10 /> -->
   <!-- <Day11 /> -->
-  <Day12 />
+  <!-- <Day12 /> -->
+  <Day13 />
 </template>
 
 <style>
